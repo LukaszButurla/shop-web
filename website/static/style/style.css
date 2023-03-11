@@ -19,14 +19,20 @@ body {
     background-color: #F1F1F1;
     border-radius: 25px;
     padding: 15px;
-    min-height: 250px;
+
 
 }
 
 .login {
     width: 25vw;
     height: 30vh;
-    min-width: 400px;
+    min-height: 250px;
+}
+
+.register {
+    width: 25vw;
+    height: 40vh;
+    min-height: 400px;
 }
 
 .box h1 {
@@ -53,23 +59,32 @@ body {
     font-size: 16px;
 }
 
-.box .login_button {
+.box .btn {
     position: relative;
     background-color: #49BEB7;
     width: 40%;
-    height: 20%;
     left: 50%;
     top: 25%;
     transform: translate(-50%, -50%);
     border-radius: 20px;
     transition: .2s;
+    height: 4vh;
+    min-height: 37px;
+    max-height: 60px;
 }
+
+
 
 .box .login_button:hover {
     background-color: white;
 }
 
-.new {
+.login .new {
     text-align: center;
     margin-top: 25px;
+}
+
+.register .log {
+    text-align: center;
+    margin-top: 80px;
 }
