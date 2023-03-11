@@ -1,0 +1,90 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Arial;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background: linear-gradient(120deg, #49BEB7, #085F63);
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #F1F1F1;
+    border-radius: 25px;
+    padding: 15px;
+
+
+}
+
+.login {
+    width: 25vw;
+    height: 30vh;
+    min-height: 250px;
+}
+
+.register {
+    width: 25vw;
+    height: 40vh;
+    min-height: 400px;
+}
+
+.box h1 {
+    text-align: center;
+}
+
+.box form {
+    height: 60%;
+}
+
+.box .input_field {
+    height: 100%;
+}
+
+.box .txt_enter {
+    box-sizing: border-box;
+    margin-top: 20px;
+    width: 100%;
+    height: 35px;
+    border: none;
+    background: none;
+    padding-left: 5px;
+    border-bottom: rgb(63, 63, 63) solid 1px;
+    font-size: 16px;
+}
+
+.box .btn {
+    position: relative;
+    background-color: #49BEB7;
+    width: 40%;
+    left: 50%;
+    top: 25%;
+    transform: translate(-50%, -50%);
+    border-radius: 20px;
+    transition: .2s;
+    height: 4vh;
+    min-height: 37px;
+    max-height: 60px;
+}
+
+
+
+.box .login_button:hover {
+    background-color: white;
+}
+
+.login .new {
+    text-align: center;
+    margin-top: 25px;
+}
+
+.register .log {
+    text-align: center;
+    margin-top: 80px;
+}
