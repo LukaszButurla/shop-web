@@ -8,6 +8,9 @@ body {
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+}
+
+.back {
     background: linear-gradient(120deg, #49BEB7, #085F63);
 }
 
@@ -87,4 +90,35 @@ body {
 .register .log {
     text-align: center;
     margin-top: 80px;
+}
+
+.home {
+    background-color: #F1F1F1;
+}
+
+
+header {
+    width: 100%;
+    height: 8vh;
+    position: absolute;
+    background-color: #49BEB7;
+    min-height: 60px;
+}
+
+header div {
+    height: 100%;
+}
+
+.logo {
+    color: black;
+    font-size: 2.5em;
+    margin-left: 20px;
+    text-decoration: none;
+    line-height: 8vh;
+}
+
+
+.home .login {
+    text-decoration: none;
+    margin-left: 85%;
 }
