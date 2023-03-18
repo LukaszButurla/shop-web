@@ -11,15 +11,30 @@
     <div class="box register">
         <h1>Rejestracja</h1>
         <form method="post">
+            {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                {% if category == "error" %}
+                <div class="error">
+                    {{message}}
+                </div>
+                {% elif category == "success" %}
+                <div class="success">
+                    {{message}}
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
             <div class="input_field">
-                <input class="txt_enter" type="imie" placeholder="Imię"><br>
-                <input class="txt_enter" type="email" placeholder="Email"><br>
-                <input class="txt_enter" type="password" placeholder="Hasło"><br>
-                <input class="txt_enter" type="password" placeholder="Powtórz hasło"><br>
+                <input class="txt_enter" type="imie" placeholder="Imię" name="name"><br>
+                <input class="txt_enter" type="email" placeholder="Email" name="email"><br>
+                <input class="txt_enter" type="password" placeholder="Hasło", name="password1"><br>
+                <input class="txt_enter" type="password" placeholder="Powtórz hasło" name="password2"><br>
                 <input class="register_button btn" type="submit" value="Zarejestruj">
             </div>
             <div class="log">
-                <p>Masz już konto? <a href="#">Zaloguj się</a></p>
+                <p>Masz już konto? <a href="/login">Zaloguj się</a></p>
             </div>
 
 
