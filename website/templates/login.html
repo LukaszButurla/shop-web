@@ -10,6 +10,21 @@
 <body class="back">
     <div class="box login">
         <h1>Logowanie</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                {% for category, message in messages %}
+                {% if category == "error" %}
+                <div class="error">
+                    {{message}}
+                </div>
+                {% elif category == "success" %}
+                <div class="success">
+                    {{message}}
+                </div>
+                {% endif %}
+                {% endfor %}
+            {% endif %}
+            {% endwith %}
         <form method="post">
             <div class="input_field">
                 <input class="txt_enter" type="email" placeholder="Email" name="email"><br>

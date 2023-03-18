@@ -37,10 +37,10 @@ def login():
         if user:
             if check_password_hash(user.password, password):
                 login_user(user, remember=True)
-                print("login")
+                flash("Zalogowano", category="success")
             else:
-                print("Incorrect password")
+                flash("Niepoprawne hasło", category="error")
         else:
-            print("account doesnt exits")
+            flash("Konto nie istnieje", category="error")
             
     return render_template("login.html")
