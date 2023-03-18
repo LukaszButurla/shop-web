@@ -1,5 +1,6 @@
 from flask import Blueprint, render_template, request, flash
-from werkzeug.security import generate_password_hash
+from flask_login import login_user
+from werkzeug.security import generate_password_hash, check_password_hash
 from .models import User
 from . import db
 
@@ -26,3 +27,20 @@ def sign_up():
             flash("Rejestracja przebiegła pomyślnie", category="success")
     
     return render_template("sign_up.html")
+
+@auth.route("/login", methods=["POST", "GET"])
+def login():
+    if request.method == "POST":
+        email = request.form.get("email")
+        password = request.form.get("password")
+        user = User.query.filter_by(email = email).first()
+        if user:
+            if check_password_hash(user.password, password):
+                login_user(user, remember=True)
+                print("login")
+            else:
+                print("Incorrect password")
+        else:
+            print("account doesnt exits")
+            
+    return render_template("login.html")
